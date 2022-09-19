@@ -17,15 +17,15 @@ with open('config.json','r') as outfile:
     print(sys.argv)
     if sys.argv[1] == "add" or sys.argv[1] == "remove":
         with open('config.json','w') as f:
-            if sys.argv[1] == "add":
+            if sys.argv[1] == "remove":
                 for user in users:
                     if user == sys.argv[2]:
-                        users.append(user)
+                        users.removed(user)
                         print("uid {} removed".format(user))
             else:
-                users.removed(sys.argv[2])
+                users.append(sys.argv[2])
                 print("uid {} added".format(sys.argv[2]))
-                
+            print(users)
             data = dict()
             data["token"] = token
             data["users"] = users
