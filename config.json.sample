@@ -1,1 +1,7 @@
-[{"token":"your_token"}]
+{
+    "token": "your_token",
+    "users": [
+        "123456789",
+        "987654321"
+    ]
+}
