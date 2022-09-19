@@ -17,7 +17,7 @@ with open('config.json','r') as outfile:
             if sys.argv[1] == "remove":
                 for user in users:
                     if user == sys.argv[2]:
-                        users.removed(user)
+                        users.remove(user)
                         print("uid {} removed".format(user))
             else:
                 users.append(sys.argv[2])
